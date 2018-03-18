@@ -1,0 +1,14 @@
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\bin\Debug\NumGen Client.exe.config
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\bin\Debug\NumGen Client.exe
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\bin\Debug\NumGen Client.pdb
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\obj\Debug\MainWindow.g.cs
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\obj\Debug\App.g.cs
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\obj\Debug\NumGen Client_MarkupCompile.cache
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\obj\Debug\NumGen Client_MarkupCompile.lref
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\obj\Debug\MainWindow.baml
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\obj\Debug\NumGen Client.g.resources
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\obj\Debug\NumGen_Client.Properties.Resources.resources
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\obj\Debug\NumGen Client.csproj.GenerateResource.Cache
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\obj\Debug\NumGen Client.csproj.CoreCompileInputs.cache
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\obj\Debug\NumGen Client.exe
+c:\users\shubham\source\repos\NumGen Client\NumGen Client\obj\Debug\NumGen Client.pdb

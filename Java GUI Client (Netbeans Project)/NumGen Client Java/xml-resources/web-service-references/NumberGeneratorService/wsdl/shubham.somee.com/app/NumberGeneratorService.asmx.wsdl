@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="NS_NumGen" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="NS_NumGen" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="NS_NumGen">
+      <s:element name="primeRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="low" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="high" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="primeRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="primeRangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="compositeRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="low" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="high" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="compositeRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compositeRangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="perfectSquaresRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="low" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="high" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="perfectSquaresRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="perfectSquaresRangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fibonacciRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="low" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="high" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="fibonacciRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fibonacciRangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="randomNumbers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="low" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="high" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="n" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="randomNumbersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="randomNumbersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="powersofTwo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="low" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="high" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="powersofTwoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="powersofTwoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="evenRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="low" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="high" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="evenRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="evenRangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="oddRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="low" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="high" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="oddRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oddRangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="palindromeRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="low" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="high" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="palindromeRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="palindromeRangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="primeRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:primeRange" />
+  </wsdl:message>
+  <wsdl:message name="primeRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:primeRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="compositeRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:compositeRange" />
+  </wsdl:message>
+  <wsdl:message name="compositeRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:compositeRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="perfectSquaresRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:perfectSquaresRange" />
+  </wsdl:message>
+  <wsdl:message name="perfectSquaresRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:perfectSquaresRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="fibonacciRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:fibonacciRange" />
+  </wsdl:message>
+  <wsdl:message name="fibonacciRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:fibonacciRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="randomNumbersSoapIn">
+    <wsdl:part name="parameters" element="tns:randomNumbers" />
+  </wsdl:message>
+  <wsdl:message name="randomNumbersSoapOut">
+    <wsdl:part name="parameters" element="tns:randomNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="powersofTwoSoapIn">
+    <wsdl:part name="parameters" element="tns:powersofTwo" />
+  </wsdl:message>
+  <wsdl:message name="powersofTwoSoapOut">
+    <wsdl:part name="parameters" element="tns:powersofTwoResponse" />
+  </wsdl:message>
+  <wsdl:message name="evenRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:evenRange" />
+  </wsdl:message>
+  <wsdl:message name="evenRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:evenRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="oddRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:oddRange" />
+  </wsdl:message>
+  <wsdl:message name="oddRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:oddRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="palindromeRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:palindromeRange" />
+  </wsdl:message>
+  <wsdl:message name="palindromeRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:palindromeRangeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="NumberGeneratorServiceSoap">
+    <wsdl:operation name="primeRange">
+      <wsdl:input message="tns:primeRangeSoapIn" />
+      <wsdl:output message="tns:primeRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="compositeRange">
+      <wsdl:input message="tns:compositeRangeSoapIn" />
+      <wsdl:output message="tns:compositeRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="perfectSquaresRange">
+      <wsdl:input message="tns:perfectSquaresRangeSoapIn" />
+      <wsdl:output message="tns:perfectSquaresRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="fibonacciRange">
+      <wsdl:input message="tns:fibonacciRangeSoapIn" />
+      <wsdl:output message="tns:fibonacciRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="randomNumbers">
+      <wsdl:input message="tns:randomNumbersSoapIn" />
+      <wsdl:output message="tns:randomNumbersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="powersofTwo">
+      <wsdl:input message="tns:powersofTwoSoapIn" />
+      <wsdl:output message="tns:powersofTwoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="evenRange">
+      <wsdl:input message="tns:evenRangeSoapIn" />
+      <wsdl:output message="tns:evenRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="oddRange">
+      <wsdl:input message="tns:oddRangeSoapIn" />
+      <wsdl:output message="tns:oddRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="palindromeRange">
+      <wsdl:input message="tns:palindromeRangeSoapIn" />
+      <wsdl:output message="tns:palindromeRangeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NumberGeneratorServiceSoap" type="tns:NumberGeneratorServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="primeRange">
+      <soap:operation soapAction="NS_NumGen/primeRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="compositeRange">
+      <soap:operation soapAction="NS_NumGen/compositeRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="perfectSquaresRange">
+      <soap:operation soapAction="NS_NumGen/perfectSquaresRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fibonacciRange">
+      <soap:operation soapAction="NS_NumGen/fibonacciRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="randomNumbers">
+      <soap:operation soapAction="NS_NumGen/randomNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="powersofTwo">
+      <soap:operation soapAction="NS_NumGen/powersofTwo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="evenRange">
+      <soap:operation soapAction="NS_NumGen/evenRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="oddRange">
+      <soap:operation soapAction="NS_NumGen/oddRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="palindromeRange">
+      <soap:operation soapAction="NS_NumGen/palindromeRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="NumberGeneratorServiceSoap12" type="tns:NumberGeneratorServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="primeRange">
+      <soap12:operation soapAction="NS_NumGen/primeRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="compositeRange">
+      <soap12:operation soapAction="NS_NumGen/compositeRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="perfectSquaresRange">
+      <soap12:operation soapAction="NS_NumGen/perfectSquaresRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fibonacciRange">
+      <soap12:operation soapAction="NS_NumGen/fibonacciRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="randomNumbers">
+      <soap12:operation soapAction="NS_NumGen/randomNumbers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="powersofTwo">
+      <soap12:operation soapAction="NS_NumGen/powersofTwo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="evenRange">
+      <soap12:operation soapAction="NS_NumGen/evenRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="oddRange">
+      <soap12:operation soapAction="NS_NumGen/oddRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="palindromeRange">
+      <soap12:operation soapAction="NS_NumGen/palindromeRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NumberGeneratorService">
+    <wsdl:port name="NumberGeneratorServiceSoap" binding="tns:NumberGeneratorServiceSoap">
+      <soap:address location="http://shubham.somee.com/app/NumberGeneratorService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="NumberGeneratorServiceSoap12" binding="tns:NumberGeneratorServiceSoap12">
+      <soap12:address location="http://shubham.somee.com/app/NumberGeneratorService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

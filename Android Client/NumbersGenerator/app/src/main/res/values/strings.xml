@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Numbers Generator</string>
+
+
+    <string-array name="types_of_num">
+        <item>Prime Numbers</item>
+        <item>Composite Numbers</item>
+        <item>Perfect Squares</item>
+        <item>Fibonacci Numbers</item>
+        <item>Power of 2’s</item>
+        <item>Even Numbers</item>
+        <item>Odd Numbers</item>
+        <item>Palindromic Numbers</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="xyz.shubhamkumar.numbersgenerator.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.22"
+            android:gravity="center"
+            android:text="URL: "
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/tburl"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.77"
+            android:inputType="textUri"
+            android:text="http://shubham.somee.com" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.22"
+            android:gravity="center"
+            android:text="Type: "
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.77"
+            android:entries="@array/types_of_num"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.22"
+            android:gravity="center"
+            android:text="Start: "
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/tbstart"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.77"
+            android:inputType="number" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.22"
+            android:gravity="center"
+            android:text="End: "
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/tbEnd"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.77"
+            android:inputType="number"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnGenerate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Generate"
+        android:onClick="btnGenerateOnClick"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.4">
+
+        <TextView
+            android:id="@+id/tbAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
