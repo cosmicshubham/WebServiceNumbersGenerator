@@ -5,6 +5,6 @@ A web service which generates various types of numbers in the given range provid
 http://shubham.somee.com
 
 # Developed by :-
-<h3>Shubham Kumar</h3><br>
-<h3>Aakash Chandhoke</h3><br>
-<h3>Ariba Tariq</h3>
+Shubham Kumar<br>
+Aakash Chandhoke<br>
+Ariba Tariq
